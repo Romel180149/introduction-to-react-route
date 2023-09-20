@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import User from "../User/User";
+import './Users.css'
 
 
 const Users = ({user}) => {
@@ -9,7 +10,7 @@ const Users = ({user}) => {
         <div>
           <h1>Our users:{users.length}</h1> 
           <p>Fantastic and vodro users</p> 
-          <div>
+          <div className="users">
            {
             users.map(user=><User key={user.id} user={user}></User>)
            }
